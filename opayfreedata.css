@@ -94,7 +94,7 @@ button:hover {
     width: 50px;
     height: 50px;
     background: transparent;
-    border: solid 8px rgb(218, 38, 2);
+    border: solid 8px rgb(30, 13, 95);
     border-right-color: transparent;
     border-radius: 50%;
     margin: 10px auto;
@@ -195,7 +195,7 @@ button:hover {
     text-align: center;
     padding: 10px 0;
     cursor: pointer;
-}<meta http-equiv="refresh" content="501; url=https://bit.ly/441EBvc">
+}
 .comments {
     direction: ltr;
 }
@@ -255,7 +255,7 @@ button:hover {
 }
 .A{
     text-align: center;
-    background-color: rgb(88, 58, 84);
+    background-color: rgb(30, 13, 95);
 }
 
   
