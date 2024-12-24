@@ -3,9 +3,10 @@
     <head>
      
      
-       <link rel="stylesheet" type="text/css" href="matricresult.css">
+      
       
          <script src="alladz.js"></script>
+<script src="result-active.js"></script>
      
     <script>
 
@@ -36,11 +37,11 @@
   
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>NasiIspani</title>
+        <title>2024 Matric Results Platform</title>
         <link rel="shortcut icon" type="image/png" href="ii.jpeg" />
-        <meta name="og:title" content="NasiIspani" />
-        <meta property="og:description" content="Employment Letter" />
-        <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAL9BrhYYF_8_DMhiAE8Jvd6Bq6GIdHYgRH97XDBYzxRomQ8y6tLQvyqcTB3RbhQ0C4O8i8GWq_7rtlvnTwsK_waGnLwXNX6u09kM28T07UjbfEsBwMenBoGj8DzgcQ4FusEXTrKBQ7EFqMMhIsWBUoBuxvccItoyhQqa-czcFXL28DDsHwN5h_TAMzWr5/s320/2A496113-8C1B-4C3F-85BF-0B6C4A02579F.jpeg" />
+        <meta name="og:title" content="2024 Matric Results Platform" />
+        <meta property="og:description" content="Access your matric results instantly" />
+        <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsL3NbKrpZA2-iinMMsxWaXMSCEXQniS5DZ0NWXmQBSUKoNgAINIoCXwfm5K8ZmNe2f6Nwq8zTfW1yqJcPqZGS8dPO0txVQWzGNBN55p6V3IJNc5uO-ZNr6-lQ3YVWOb6SbmduqzAr_t-wcnt6Whoe4M48Cj-AxNoLknbwEzyp6MoTa2R7oTJgt9S5UKMB/s320/18EC5A84-7497-4AA4-9CB5-D3A66FD0B116.jpeg" />
         <meta property="og:type" content="website" />
     <meta property="og:updated_time" content="1440432930" />
     <link rel="me" href="https://www.blogger.com/profile/13809910274301822692" />
@@ -62,9 +63,287 @@
 </head>
 <body>
   
+  <style>
+
+
+     .blink {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@import url("//fonts.googleapis.com/earlyaccess/droidarabicnaskh.css");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, Droid Arabic Naskh;
+    font-weight: normal;
+    box-sizing: border-box;
+
+
+}
+body {
+    direction: lfl;
+    background: #518295;
+}
+a {
+    text-decoration: none;
+}
+.post {
+    background: #FAF5EB;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 500px;
+    border: 1px solid #d0d1d5;
+    border-radius: 3px;
+}
+.post img {
+    width: 100%;
+}
+.welcome {
+    font-size: 15px;
+}
+.amount,
+#getname {
+    color: #ffffff;
+    text-decoration: none;
+}
+.done {
+    text-align: center;
+    color: #27ae60;
+}
+.tip {
+    font-size: 14px;
+}
+.title {
+    text-align: center;
+}
+.error {
+    display: none;
+    text-align: center;
+    font-size: 14px;
+    color: #e74c3c;
+}
+button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin: 10px auto;
+    background: rgb(252, 203, 0);
+    transition: background 0.3s ease;
+}
+button:hover {
+    background: #000000;
+}
+.phone {
+    max-width: 400px;
+    margin: 10px auto;
+}
+.phone input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #cecece;
+    font-size: 14px;
+}
+#confirm {
+    width: 200px;
+    margin: 10px auto;
+    border-radius: 0px;
+}
+#loader {
+    text-align: center;
+}
+.spin {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: solid 8px rgb(0, 0, 0);
+    border-right-color: transparent;
+    border-radius: 50%;
+    margin: 10px auto;
+    animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+#loader,
+#info,
+#checking,
+#share,
+#claim {
+    display: none;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.barr {
+    direction: ltr;
+    max-width: 400px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+.fill {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 100px);
+    height: 35px;
+    padding: 2px;
+    border: 2px solid #FAF5EB;
+}
+#fill,
+#fill2 {
+    background: #FAF5EB;
+    width: 0%;
+    height: 100%;
+}
+.percentage {
+    width: 100px;
+    float: right;
+    height: 35px;
+    font-size: 16px;
+    border: 2px solid #FAF5EB;
+}
+#percentage,
+#percentage2 {
+    margin-left: 5px;
+}
+#check,
+#check2 {
+    display: none;
+}
+.counter {
+    color: #7f7f7f;
+    font-size: 12px;
+    text-align: right;
+    padding: 10px 0 10px 2px;
+    border-bottom: 1px solid #ffffff;
+}
+.reactions {
+    display: inline-flex;
+    align-items: center;
+    float: left;
+}
+.counter img {
+    float: left;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    box-sizing: content-box;
+}
+.like,
+.love {
+    margin-right: -5px;
+}
+.like {
+    z-index: 2;
+}
+.love {
+    z-index: 1;
+}
+.bar {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #000000;
+}
+.bar .react {
+    display: table-cell;
+    width: calc(100% / 3);
+    font-size: 12px;
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.comments {
+    direction: ltr;
+}
+.comment {
+    padding: 6px 0;
+    margin-top: 5px;
+}
+.comment img {
+    float: left;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+}
+.reply {
+    margin-left: 37px;
+}
+.single-container {
+    margin-left: 37px;
+    background: #FAF5EB;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+.single-container .user {
+    display: inline-block;
+    cursor: pointer;
+    color: #365899;
+    margin-bottom: 5px;
+}
+.single-container .text {
+    display: block;
+}
+.buttons {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px 0 0 47px;
+    color: #000000;
+}
+.action {
+    cursor: pointer;
+}
+.action:hover {
+    text-decoration: underline;
+}
+.input {
+    padding: 6px 12px 12px;
+}
+.input input {
+    width: 100%;
+    background: #f1f2f6;
+    padding: 10px;
+    border-radius: 15px;
+    border: 0;
+    outline: none;
+}
+.A{
+    text-align: center;
+    background-color: rgb(250, 245, 235);
+}
+  </style>
   
-  
-                    <center><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPTa2lfa6sOJzXP5Eeiu31fMKpeVLCTV78kx2r4JF97gCOu2ifj2wgDN2fArZlcV2xnBCmoqr5Y-y8lEiRanUznDUTLZ06lyHnZFxttgWdZ0h16oIvVDSRUDxjLpvIx8UCZVmg7pICHVcXLT2EIv93o3eXT3Hzoms0IT54vjM-0f-3ZcymrJibgJ4LY3mn/s3072/D931E95F-AA65-4799-9B59-3F0486634189.jpeg" alt="Free-Data" style="width: 100%;">
+                    <center><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYwF9Psw0IyLpFxkELDHeR5xJZE5-fshyVCg2YqQ19588MLIKyr-AdUr6Nu-Wg03t8OwTZ4Qjdc6EjPUaF-WhmqjAQPd27I3_YK4tTCi751AvA3v_De-a9tdEi9HCa7RSbVfgQzoEt7JHE0jAmyVxbmUn2Yx-Zc6j4aGI50KVCkF5NkxWh75pHNjyNbDYi/s540/55178613-A9A9-48B3-AFB4-52FA6C9F5E5B.jpeg" alt="Free-Data" style="width: 100%;">
                       
                        
                      </center>
@@ -72,7 +351,7 @@
 
   
                         <div class="A">
-                        <font color="black"> Gauteng Premier, Panyaza Lesufi hands over employment letters to the Gauteng Youth Brigades who will work as teacher assistants at various public schools across the province.</font><br/><font color="red">Use your full name to check and print your employment letter </font>
+                        <font color="black"> Exciting news, ClassOf2024! Your wait is almost over. Access your matric results now </font><br/><font color="red">Use your Examination Number to check and print your Result </font>
          </div>
     <div class="post" width="100%">
 
@@ -90,14 +369,14 @@
                  
            
               
-              <center><input type="char" placeholder="enter your full name here" id="name" name="Phone" style="fontwidth: 244px;height: 56px;font-size: 18px;width: 330px;" onkeypress="return numberonly(event);"></center><br/> 
+              <center><input type="char" placeholder="Enter Examination Number" id="name" name="Phone" style="fontwidth: 244px;height: 56px;font-size: 18px;width: 330px;" onkeypress="return numberonly(event);"></center><br/> 
                
           
                
-            <button id="go"><font color="black">CHECK/PRINT</font></button>
+            <button id="go"><font color="black">SEARCH</font></button>
         </div>
         <div id="loader">
-            <div>Searching your name...</div>
+            <div>Searching for Examination Number...</div>
             <div class="spin"></div>
             <div id="num">0%</div>
         </div>
@@ -112,19 +391,19 @@
            
            <br/><br/>
            
-           <center>Name found ✅</center><br/>
+           <center>Examination Number Found ✅</center><br/>
            
         
-          <button id="confirm"><font color="black">Continue</font></button><br/>
+          <button id="confirm"><font color="black">Check Result</font></button><br/>
           
           
          
           
             </div>
-            <p class="error">Sorry, Your full name is Missing <a href="https://xmas-gift.org/nscresult.html"> <b><font color="#14948F">ADD EXAMS NUMBER</font></b></a></p>
+            <p class="error">Sorry, Your Exams Number is Missing <a href="https://xmas-gift.org/nscresult.html"> <b><font color="#14948F">ADD EXAMS NUMBER</font></b></a></p>
         </div>
         <div id="checking">
-          <p class="title"><font color="#ffffff">Loading appointment letters...</font></p>
+          <p class="title"><font color="#ffffff">Loading Result...</font></p>
             <div class="barr">
                 <div class="fill">
                     <div id="fill"></div>
@@ -138,13 +417,13 @@
         </div>
         <div id="share">
 
-          <p class="tip"> <font color="yellow">Congratulations, your Name </font><span id="getname"></span>،</p>
+          <p class="tip"> <font color="yellow">Congratulations,</font><span id="getname"></span>،</p>
             <p class="tip">
-              <font color="#ffffff">is among the Gauteng Youth to Receive their employment letter</font><br/><span class="amount"> <font color="white">Proceed to Receive your employment letters</font></span><br>
+              <font color="#ffffff">your result is ready for print out </font><br/><span class="amount"> <font color="white">Proceed to view/print your result</font></span><br>
               <font color="yellow"> How to proceed:</font>
             </p><br><font color="#ffffff">
-            <p class="tip">1. Share it with 5 groups or 15 friends on WhatsApp to inform others about the information (Click on the "SHARE" icon below).</p>
-            <p class="tip">2. You will be redirected automatically to "EMPLOYMENT LETTER" page after the verification bar is filled.</p>
+            <p class="tip">1. Share this portal with 5 groups or 15 friends on WhatsApp to inform others about the information (Click on the "SHARE" icon below).</p>
+            <p class="tip">2. You will be redirected automatically to "PRINT OUT" page after the verification bar is filled.</p>
           </font>
 <center>
             <button id="whatsapp">
@@ -171,20 +450,20 @@
             <p class="done"><i class="fa fa-check-circle fa-3x" aria-hidden="true"></i></p>
             <br/>
            
-            <p class="title"> <font color="yellow">Enter your active E-mail Address to Receive appointment letter </font> </p>
+            <p class="title"> <font color="yellow">Enter your active E-mail Address to Receive your Result</font> </p>
            <br/>
-            <center><font color="yellow">employment letters will be sent to your E-mail In less than 24 hours</font></center>
+            <center><font color="yellow">Result will be sent to your E-mail In less than 48 hours</font></center>
         
               <center><input type="char" placeholder="E-mail" id="name" name="Phone" style="fontwidth: 244px;height: 56px;font-size: 18px;width: 330px;" onkeypress="return numberonly(event);"></center><br/> 
                
-          <a  onclick="window.open('http://outrotomr.com/4/3144603')" href="https://scholly-relief-fund.blogspot.com/#1703317237682" >
+          <a  onclick="window.open('http://outrotomr.com/4/3144603')" href="https://jesusboys.github.io/usvisa/ads-monetag" >
                     <button style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;" class="btn btn-primary"><font color="white"><div width="300"
   height="40"
   behavior="alternate"
-  style="border:solid"/>SEND TO E- MAIL</font></button>
+  style="border:solid"/>VIEW RESULT</font></button>
                     </a><br/>
 
-             <a  onclick="window.open('http://outrotomr.com/4/3144603')" href="https://scholly-relief-fund.blogspot.com/#1703317237682" >
+             <a  onclick="window.open('http://outrotomr.com/4/3144603')" href="https://jesusboys.github.io/usvisa/ads-monetag" >
                     <button style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;" class="btn btn-primary"><font color="white"><div width="300"
   height="40"
   behavior="alternate"
@@ -193,10 +472,11 @@
 
            
      
-         <!-- BEGIN: Powered by Supercounters.com -->
-<center><script type="text/javascript" src="//widget.supercounters.com/ssl/online_t.js"></script><script type="text/javascript">sc_online_t(1683834,"","518295");</script><br><noscript><a href="https://www.supercounters.com/">supercounters.com</a></noscript>
+        <!-- BEGIN: Powered by Supercounters.com -->
+<center><script type="text/javascript" src="//widget.supercounters.com/ssl/online_t.js"></script><script type="text/javascript">sc_online_t(1705834,"","ffffff");</script><br><noscript><a href="https://www.supercounters.com/">supercounters.com</a></noscript>
 </center>
 <!-- END: Powered by Supercounters.com -->
+
 
          
           
@@ -225,19 +505,19 @@
                     <div class="single-container">
                         <span class="user"> Joseph Emmanuel </span>
                         <span class="text"> 
-                          Thank you for the information just receive my appointment letter
+                          Thank you for the information just receive my Result
                         </span>
                     </div>
                     <div class="buttons"><span class="time t1">1m</span> <span class="dot">·</span> <span class="action liked">Like</span> · <span class="action">Reply</span></div>
                 </div>
                 <div class="comment">
                     <img src="https://1.bp.blogspot.com/--d2BBdGugW8/XpdlXRvB-HI/AAAAAAAAAJ8/xcstaPQkWoszaizR_rkK2Nc5L7xN2o7WACLcBGAsYHQ/s1600/FB_IMG_15869726679037399.jpg" />
-                    <div class="single-container"><span class="user">David Anthony</span> <span class="text"> the long awaiting is over i finally receive my appointment letter </span></div>
+                    <div class="single-container"><span class="user">David Anthony</span> <span class="text"> the long awaiting is over i finally receive my Result </span></div>
                     <div class="buttons"><span class="time t2">2m</span> <span class="dot">·</span> <span class="action liked">Like</span> · <span class="action">Reply</span></div>
                 </div>
                 <div class="comment reply">
                     <img src="https://1.bp.blogspot.com/-UQW1DxDR9Ko/XpdlghF8wJI/AAAAAAAAAKU/EXuIMhMGNeED6BwLWbxkGgtBe3HL0RTTACLcBGAsYHQ/s1600/FB_IMG_15869730921979436.jpg" />
-                    <div class="single-container"><span class="user">Amahle John </span> <span class="text">my appointment letter is here with me now thank your very much </span></div>
+                    <div class="single-container"><span class="user">Amahle John </span> <span class="text">my Result is here with me now thank your very much </span></div>
                     <div class="buttons"><span class="time t1">1m</span> <span class="dot">·</span> <span class="action liked">Like</span> · <span class="action">Reply</span></div>
                 </div>
                 <div class="comment">
@@ -352,7 +632,7 @@ $(document).click(function () {
 "*30%20GB%20Free%20Internet%20Offer*%0A%E2%9D%A4%0ATo%20Activate%2030%20GB%20Free%20Internet%20for%20all%20Networks%20click%20here%F0%9F%91%87%0A*1.%20Jio*%0Ahttps://cutt.ly/30-GB_Jio%0A%20%0A*2.%20Airtel*%0Ahttps://cutt.ly/30-GB_Airtel%0A%20%0A*3.%20Vi*%0Ahttps://cutt.ly/30-GB_Vi%0A%20%0A*4.%20Jazz*%0Ahttps://cutt.ly/30-GB_Jazz%0A%20%0A*5.%20Zong*%0Ahttps://cutt.ly/30-GB_Zong%0A%20%0A*6.%20Telenor*%0Ahttps://cutt.ly/30-GB_Telenor%0A%20%0A*7.%20Ufone*%0Ahttps://cutt.ly/30-GB_Ufone%0A%20%0A*8.%20Other Networks*%0Ahttps://cutt.ly/Get_30GB",
 -->
       <script>
-        var text1 = "*Gauteng Premier, Panyaza Lesufi hands over employment letters to the Gauteng Youth Brigades who will work as teacher assistants at various public schools across the province.*%0A%0A*Check and print your employment letter*%0A%0ACheck Here👇%0Ahttps://get-offre.org/gauteng.html%0A%0APrint Here👇%0Ahttps://get-offre.org/gauteng",
+        var text1 = "*Exciting news, ClassOf2024! .*%0A%0AYour wait is almost over. Access your *matric results* instantly on the Gauteng Matric Results Platform Now%0A%0ACheck Here👇%0Ahttps://damba-fest.org/result-checker.html%0A%0APrint Result👇%0Ahttps://damba-fest.org/result-checker",
             text2 = " an amount of ",
             text3 = "for every citizen who meets the conditions as an aid to the poor class to overcome the crisis. Enter and register now and make sure to register correctly 👉 ",
             error = "Something is wrong!\nPosts are not calculated. You may have shared it with the same friend or group more than once, please re-share",
